@@ -1,0 +1,444 @@
+@import url(reset.css);
+
+/*Side_Menu*/
+.side_menu {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  padding: 20px;
+  background: #fff;
+  z-index: 20;
+}
+
+.side_menu .side_link {
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.side_link {
+  display: flex;
+  gap: 0 10px;
+}
+
+.side_link li {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.side_link li:nth-child(1) {
+  background: url(../images/culture/ico-sf.jpg) no-repeat center / cover;
+}
+
+.side_link li:nth-child(2) {
+  background: url(../images/culture/ico-ssf.png) no-repeat center / cover;
+}
+
+.side_link li:nth-child(3) {
+  background: url(../images/culture/ico-swf.png) no-repeat center / cover;
+}
+
+.side_link li:nth-child(4) {
+  background: url(../images/culture/ico-hoam.png) no-repeat center / cover;
+}
+
+.side_link a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.s_menu_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.s_menu {
+  display: flex;
+  color: #5a5a5a;
+  padding: 20px 0;
+  border-bottom: 1px solid #666;
+  word-break: keep-all;
+}
+
+.s_menu > * {
+  flex: 1;
+}
+
+.s_menu > a {
+  display: block;
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+.s_menu ul {
+  padding: 10px 0;
+}
+
+.s_menu li {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.s_menu li:hover {
+  background: #7cc8ff;
+}
+
+.s_menu a {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+}
+
+.s_menu span {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  font-size: 1rem;
+}
+
+/*Header*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+header.active {
+  background: #fff;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h_logo {
+  display: block;
+  width: 194px;
+  min-width: 194px;
+}
+
+.h_logo img {
+  display: block;
+  width: 100%;
+}
+
+.h_menu {
+  display: flex;
+  gap: 0 30px;
+  text-align: center;
+  font-size: 1.125em;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: #fff;
+}
+
+header.active .h_menu {
+  color: #5a5a5a;
+}
+
+.h_menu .menu {
+  padding: 12px 5px;
+  text-align: center;
+  position: relative;
+}
+
+.h_menu ul {
+  display: none;
+  position: absolute;
+  left: 50%;
+  width: 180px;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: left;
+  color: #5a5a5a;
+  background: #fff;
+}
+
+header.active .h_menu ul {
+  border: 1px solid #ccc;
+}
+
+.h_menu ul a {
+  display: flex;
+  gap: 0 5px;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.h_menu ul a:hover {
+  background: #7cc8ff;
+}
+
+.h_menu span {
+  width: 20px;
+  height: 20px;
+}
+
+.btn_sub_menu {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  background: #0095ff;
+  cursor: pointer;
+}
+
+.btn_sub_menu span {
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  background: #000;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+.btn_sub_menu span:nth-child(2) {
+  top: 12px;
+}
+
+.btn_sub_menu span:nth-child(3) {
+  bottom: 11px;
+}
+
+.btn_sub_menu.active span:nth-child(1) {
+  opacity: 0;
+}
+
+.btn_sub_menu.active span:nth-child(2) {
+  top: auto;
+  transform: translateX(-50%) rotate(45deg);
+}
+.btn_sub_menu.active span:nth-child(3) {
+  bottom: auto;
+  top: auto;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+/*Main*/
+/*Section1*/
+.sec1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  position: relative;
+}
+
+.sec1 .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../images/culture/head-main.jpg) no-repeat 0 0 / cover;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+.sec1 .desc {
+  margin-left: 40px;
+  width: 80%;
+  word-break: keep-all;
+}
+
+.sec1 h1 {
+  font-size: 3.75em;
+  letter-spacing: -4px;
+}
+
+.sec1 p {
+  margin-top: 20px;
+  font-size: 1.5em;
+  letter-spacing: -1px;
+}
+
+/*Section2*/
+.sec2 {
+  padding: 50px 0;
+}
+
+.sec2 ul {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 30px;
+  position: relative;
+  word-break: keep-all;
+}
+
+.sec2 a {
+  display: inline-block;
+  padding: 20px;
+  height: 100%;
+}
+
+.sec2 .sec2_list {
+  width: calc(50% - 15px);
+  height: 240px;
+  color: #fff;
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.sec2_notice {
+  position: absolute;
+  width: 100%;
+  left: calc(50% + 15px);
+  top: -140px;
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.sec2_notice a {
+  position: relative;
+  width: 100%;
+  color: #000;
+}
+
+.sec2_notice img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+}
+
+.sec2 .sec2_list:not(:last-child):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 3px 10px #666;
+}
+
+.sec2_list.sec2_list1 {
+  height: 360px;
+  background-image: url(../images/culture/card-banner-main-about.jpg);
+}
+
+.sec2_list2 {
+  background-image: url(../images/culture/head-wana.jpg);
+}
+
+.sec2_list3 {
+  background-image: url(../images/culture/card-banner-main-leeum.jpg);
+}
+
+.sec2_list4 {
+  background-image: url(../images/culture/head-cultural-support-business.jpg);
+}
+
+.sec2_list.sec2_list5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 420px;
+  font-size: 1.25em;
+  background-image: url(../images/culture/card-banner-main-history.jpg);
+}
+
+.sec2_list5 button {
+  width: 200px;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: transparent;
+  color: #fff;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.sec2_list5 button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 7px;
+  height: 7px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-45deg) translateY(-50%);
+}
+
+.sec2_list5 button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 100%;
+  background: #0095ff;
+}
+
+@media screen and (max-width: 960px) {
+  /*Header*/
+  header .wrapper {
+    padding: 5px 15px;
+  }
+
+  .h_menu {
+    display: none;
+  }
+
+  .h_menu .menu {
+    padding: 12px 5px;
+    text-align: center;
+    position: relative;
+  }
+
+  .h_link {
+    display: none;
+  }
+
+  .btn_sub_menu {
+    display: block;
+  }
+
+  /*Main*/
+  /*Section1*/
+  .sec1 {
+    height: 64vh;
+  }
+
+  .sec1 .desc {
+    padding: 0 20px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .sec1 h1 {
+    font-size: 1.875em;
+  }
+
+  .sec1 p {
+    font-size: 1.125em;
+    letter-spacing: 0;
+  }
+
+  .sec2 {
+    height: 200px;
+  }
+}
