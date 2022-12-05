@@ -298,7 +298,12 @@ header.active .h_menu ul {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: 0.3s;
+  transition: 0.6s ease;
+}
+
+.sec2 .sec2_list:not(:last-child):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 3px 10px #666;
 }
 
 .sec2_notice {
@@ -321,11 +326,6 @@ header.active .h_menu ul {
   bottom: 20px;
   right: 20px;
   width: 80px;
-}
-
-.sec2 .sec2_list:not(:last-child):hover {
-  transform: translateY(-5px);
-  box-shadow: 0 3px 10px #666;
 }
 
 .sec2_list.sec2_list1 {
@@ -360,7 +360,7 @@ header.active .h_menu ul {
 .sec2_list5 button {
   width: 200px;
   margin-top: 20px;
-  padding: 12px 20px;
+  padding: 20px 20px;
   background: transparent;
   color: #fff;
   border-radius: 10px;
@@ -371,13 +371,20 @@ header.active .h_menu ul {
   overflow: hidden;
 }
 
+.sec2_list5 span {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
 .sec2_list5 button:after {
   content: "";
   position: absolute;
   top: 50%;
   right: 10px;
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
   border-right: 1px solid #fff;
   border-bottom: 1px solid #fff;
   transform: rotate(-45deg) translateY(-50%);
@@ -388,9 +395,14 @@ header.active .h_menu ul {
   position: absolute;
   top: 0;
   left: 0;
-  width: 110%;
+  width: 0;
   height: 100%;
   background: #0095ff;
+  transition: 0.4s;
+}
+
+.sec2_list5 button:hover:before {
+  width: 110%;
 }
 
 @media screen and (max-width: 960px) {
@@ -438,7 +450,101 @@ header.active .h_menu ul {
     letter-spacing: 0;
   }
 
+  /*Section2*/
   .sec2 {
+    padding: 30px 0;
+  }
+
+  .sec2 .sec2_list {
+    width: 100%;
+    height: 160px;
+    border-radius: 20px;
+  }
+
+  .sec2_list h2 {
+    font-size: 1.25em;
+  }
+
+  .sec2_notice {
+    position: static;
+    order: 2;
+  }
+
+  .sec2_notice img {
+    width: 50px;
+  }
+
+  .sec2_list.sec2_list1 {
     height: 200px;
+  }
+
+  .sec2_list2 {
+    order: 3;
+  }
+
+  .sec2_list3 {
+    order: 1;
+  }
+
+  .sec2_list4 {
+    order: 4;
+  }
+
+  .sec2_list.sec2_list5 {
+    height: 280px;
+    font-size: 0.9em;
+    order: 5;
+  }
+
+  .sec2_list5 br {
+    display: none;
+  }
+
+  .sec2_list5 button {
+    width: 160px;
+    margin-top: 20px;
+    padding: 20px 20px;
+    background: transparent;
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sec2_list5 span {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+
+  .sec2_list5 button:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(-45deg) translateY(-50%);
+  }
+
+  .sec2_list5 button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #0095ff;
+    transition: 0.4s;
+  }
+
+  .sec2_list5 button:hover:before {
+    width: 110%;
   }
 }
