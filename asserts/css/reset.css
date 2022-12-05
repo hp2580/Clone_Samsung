@@ -41,3 +41,9 @@ button {
   transform: translateY(0);
   opacity: 1;
 }
+
+.swiper {
+  padding: 10px !important;
+  user-select: none;
+  -webkit-user-select: none;
+}
