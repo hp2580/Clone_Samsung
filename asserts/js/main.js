@@ -6,17 +6,20 @@
   function clearClass(elements, name) {
     $(elements).removeClass(name);
   }
-  function addOn_scroll(scale) {
+  function addOn_scroll() {
     setTimeout(() => {
       $(".scroll").map((current) => {
-        if ($(".scroll").eq(current).offset().top < screen * scale)
-          $(".scroll").eq(current).addClass("on");
+        let center =
+          $(".scroll").eq(current).offset().top +
+          $(".scroll").eq(current).innerHeight() / 2;
+        if (center < screen) $(".scroll").eq(current).addClass("on");
         else $(".scroll").eq(current).removeClass("on");
       });
     });
   }
 
   window.onload = () => {
+    addOn_scroll(0.85);
     if (scrollY > 0) $("header").addClass("active");
     if (window.innerWidth > 960) {
       upper960 = true;
@@ -48,8 +51,8 @@
     screen = window.scrollY + window.innerHeight;
     if (scrollY > 0) $("header").addClass("active");
     else $("header").removeClass("active");
-    if (window.innerWidth > 960) addOn_scroll(0.85);
-    else addOn_scroll(0.9);
+    if (window.innerWidth > 960) addOn_scroll();
+    else addOn_scroll();
   };
   window.onresize = () => {
     screen = window.scrollY + window.innerHeight;
@@ -60,16 +63,15 @@
         upper960 = true;
         lower960 = false;
         clearClass($(".scroll"), "on");
-        addOn_scroll(0.85);
       }
     } else {
       if (lower960 == false) {
         upper960 = false;
         lower960 = true;
         clearClass($(".scroll"), "on");
-        addOn_scroll(0.85);
       }
     }
+    addOn_scroll();
   };
   /*Page_Main*/
   $(".btn_menu").click(() => {
@@ -77,7 +79,7 @@
     $(".nav_wrap").stop().slideToggle(300);
   });
 
-  /*Page_Culture*/
+  /*Page_Common*/
   $(".menu")
     .mouseenter(function () {
       $(this).children("ul").stop().slideDown(300);

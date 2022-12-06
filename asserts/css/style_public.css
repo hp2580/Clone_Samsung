@@ -3,6 +3,10 @@
   height: auto;
 }
 
+.s_menu li:hover {
+  background: #a4ffd9;
+}
+
 .side_link li:nth-child(2) {
   background: url(../images/public/ico-scf.png) no-repeat center / cover;
 }
@@ -11,6 +15,10 @@
 .h_menu ul {
   width: 200px;
   font-size: 0.75rem;
+}
+
+.h_menu ul a:hover {
+  background: #a4ffd9;
 }
 
 .btn_sub_menu {
