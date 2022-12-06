@@ -1,0 +1,59 @@
+/*Side_Menu*/
+.side_menu {
+  height: auto;
+}
+
+.side_link li:nth-child(2) {
+  background: url(../images/public/ico-scf.png) no-repeat center / cover;
+}
+
+/*Header*/
+.h_menu ul {
+  width: 200px;
+  font-size: 0.75rem;
+}
+
+.btn_sub_menu {
+  background: #a4ffd9;
+}
+
+/*Section1*/
+.sec1 .bg {
+  background: url(../images/public/head-main.jpg) no-repeat 0 0 / cover;
+}
+
+/*Section2*/
+.sec2_list1:before {
+  background: url(../images/public/head-about.jpg) no-repeat center / cover;
+}
+
+.sec2_list2:before {
+  background: url(../images/public/card-banner-main-samsung-medical-center-220715.jpg)
+    no-repeat center / cover;
+}
+
+.sec2_list3:before {
+  background: url(../images/public/card-banner-main-samsung-noble-county-220715.jpg)
+    no-repeat center / cover;
+}
+
+.sec2_list4:before {
+  background: url(../images/public/main-banner-happy.jpg) no-repeat center /
+    cover;
+}
+
+.sec2_list5 button:before {
+  background: #11a668;
+}
+
+/*Section4*/
+.swiper li {
+  background: #dbf7eb;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  border-top: 2px solid #11a668;
+  border-left: 2px solid #11a668;
+  transform: rotate(-45deg) translate(25%, 25%);
+}

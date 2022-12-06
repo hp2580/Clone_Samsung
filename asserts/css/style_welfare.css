@@ -1,0 +1,69 @@
+/*Side_Menu*/
+.side_menu {
+  height: auto;
+}
+
+.s_menu li:hover {
+  background: #ffdfa0;
+}
+
+.side_link li:nth-child(2) {
+  background: url(../images/public/ico-scf.png) no-repeat center / cover;
+}
+
+.side_link li:nth-child(3) {
+  background: url(../images/culture/ico-ssf.png) no-repeat center / cover;
+}
+
+/*Header*/
+.h_menu ul {
+  width: 230px;
+}
+
+.h_menu ul a:hover {
+  background: #ffdfa0;
+}
+
+.btn_sub_menu {
+  background: #ffdfa0;
+}
+
+/*Section1*/
+.sec1 .bg {
+  background: url(../images/welfare/head-main.jpg) no-repeat 0 0 / cover;
+}
+
+.sec2_list1:before {
+  background: url(../images/welfare/head-about.jpg) no-repeat 0 0 / cover;
+}
+
+.sec2_list2:before {
+  background: url(../images/welfare/head-dream-class2.jpg) no-repeat 0 0 / cover;
+}
+
+.sec2_list3:before {
+  background: url(../images/welfare/head-samsung-childcare-center.jpg) no-repeat
+    0 0 / cover;
+}
+
+.sec2_list4 {
+  background: #ffdfa0;
+  color: #000;
+}
+
+.sec2_list4 img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.sec2_list5 button:before {
+  background: #ffbb34;
+}
+
+/*Section4*/
+.swiper li {
+  background: #ffedcb;
+}
