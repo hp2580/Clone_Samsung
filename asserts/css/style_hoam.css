@@ -285,7 +285,7 @@ footer .container {
 }
 
 .btn_family ul {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: -166px;
   left: -1px;
@@ -294,10 +294,14 @@ footer .container {
   background: #fff;
   border: 1px solid #eee;
   overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: 0.3s;
 }
 
 .btn_family ul.active {
-  display: block;
+  /* display: block; */
+  transform: scaleY(1);
 }
 
 .btn_family a {
@@ -467,67 +471,8 @@ footer .container {
     gap: 10px 0;
   }
 
-  .f_sns {
-    display: flex;
-    gap: 0 5px;
-  }
-
-  .f_sns a {
-    display: block;
-    height: 20px;
-  }
-
   .btn_family {
-    width: 140px;
     padding: 5px 50px 5px 5px;
-    border-radius: 5px;
     border: 1px solid #aaa;
-    cursor: pointer;
-    position: relative;
-  }
-
-  .btn_family:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 25px;
-    width: 1px;
-    height: 20px;
-    background: #ccc;
-    transform: translate(-50%, -50%);
-  }
-
-  .btn_family:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 5px;
-    width: 8px;
-    height: 5px;
-    background: #aaa;
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
-    transform: translate(-50%, -50%);
-  }
-
-  .btn_family ul {
-    display: none;
-    position: absolute;
-    top: -166px;
-    left: -1px;
-    width: 140px;
-    text-align: left;
-    background: #fff;
-    border: 1px solid #eee;
-    overflow: hidden;
-  }
-
-  .btn_family ul.active {
-    display: block;
-  }
-
-  .btn_family a {
-    display: block;
-    width: 100%;
-    padding: 5px;
   }
 }
