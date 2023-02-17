@@ -108,7 +108,7 @@ header {
   width: 100%;
   padding: 10px 0;
   transition: 0.3s;
-  z-index: 10;
+  z-index: 30;
 }
 
 header.active {
@@ -545,16 +545,17 @@ section {
 /*section5*/
 .sec5_list {
   height: 240px;
+  padding: 0 10px;
 }
 
 .sec5_list1:before {
   background: url(../images/culture/quick-banner-public-disclosure-of-management.jpg)
-    no-repeat center;
+    no-repeat center / cover;
 }
 
 .sec5_list2:before {
   background: url(../images/culture/quick-banner-annaul-report.jpg) no-repeat
-    center;
+    center / cover;
 }
 
 /*Footer*/

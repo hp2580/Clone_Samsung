@@ -6,6 +6,7 @@
   function clearClass(elements, name) {
     $(elements).removeClass(name);
   }
+
   function addOn_scroll() {
     setTimeout(() => {
       $(".scroll").map((current) => {
@@ -47,13 +48,14 @@
       },
     });
   };
-  window.onscroll = (e) => {
+  window.onscroll = () => {
     screen = window.scrollY + window.innerHeight;
     if (scrollY > 0) $("header").addClass("active");
     else $("header").removeClass("active");
     if (window.innerWidth > 960) addOn_scroll();
     else addOn_scroll();
   };
+
   window.onresize = () => {
     screen = window.scrollY + window.innerHeight;
     if (window.innerWidth > 960) {
@@ -73,6 +75,7 @@
     }
     addOn_scroll();
   };
+
   /*Page_Main*/
   $(".btn_menu").click(() => {
     $(".btn_menu").toggleClass("active");
@@ -90,8 +93,17 @@
 
   $(".btn_sub_menu").click(function () {
     $(this).toggleClass("active");
-    if ($(this).hasClass("active")) $(".side_menu").stop().slideDown();
-    else $(".side_menu").stop().slideUp();
+    if ($(this).hasClass("active")) {
+      $(".side_menu").stop().slideDown();
+      if (window.innerWidth < 960) {
+        $(document.body).css("overflow", "hidden");
+      }
+    } else {
+      $(".side_menu").stop().slideUp();
+      if (window.innerWidth < 960) {
+        $(document.body).css("overflow", "");
+      }
+    }
   });
 
   $(".f_btn_family").click(function () {
